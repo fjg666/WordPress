@@ -1,0 +1,1843 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pressgrid package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pressgrid 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-30 10:53+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: 404.php:15
+msgid "The page You are searching was not found!"
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"Sorry, the post you are looking for is not available. Maybe you want to "
+"perform a search?"
+msgstr ""
+
+#: comments.php:25
+msgid "Pingback:"
+msgstr ""
+
+#: comments.php:25
+msgid "Edit"
+msgstr ""
+
+#: comments.php:73
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:76
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:80
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:102 comments.php:162
+msgid "Comments"
+msgstr ""
+
+#: comments.php:104
+#, php-format
+msgctxt "comment"
+msgid "One comment"
+msgid_plural "Comments (%1$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:132
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:135
+msgid "Leave a reply"
+msgstr ""
+
+#: comments.php:151
+msgid "Name *"
+msgstr ""
+
+#: comments.php:155
+msgid "Email *"
+msgstr ""
+
+#: comments.php:159 tpl-profile-edit.php:58
+msgid "Website"
+msgstr ""
+
+#: content-none.php:2
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:6
+msgid "Ready to publish your first post?"
+msgstr ""
+
+#: content-none.php:6
+msgid "Get started here"
+msgstr ""
+
+#: content-none.php:10
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:18
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-page.php:12 content-single.php:40
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:16 content-single.php:44
+msgid "Page"
+msgstr ""
+
+#: content-single.php:25
+msgid "Avatar"
+msgstr ""
+
+#: content-single.php:29
+msgid "views"
+msgstr ""
+
+#: content-single.php:62
+msgid "Categories: "
+msgstr ""
+
+#: content-single.php:72
+msgid "Tags: "
+msgstr ""
+
+#: content-single.php:73
+msgid " "
+msgstr ""
+
+#: functions.php:36
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:37
+msgid "Topbar Menu"
+msgstr ""
+
+#: functions.php:38
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:68
+msgid "Post Sidebar Area"
+msgstr ""
+
+#: functions.php:69
+msgid "Page Sidebar Area"
+msgstr ""
+
+#: functions.php:78
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:163
+msgid " ..."
+msgstr ""
+
+#: functions.php:182 framework/functions/functions.breadcrumb.php:81
+#: includes/template-tags.php:537
+msgid "Home"
+msgstr ""
+
+#: functions.php:183
+msgid "Archive"
+msgstr ""
+
+#: functions.php:184 search.php:17
+msgid "Search"
+msgstr ""
+
+#: functions.php:216 includes/mega-menu/index.php:116
+#: includes/mega-menu/index.php:186
+msgid "ago"
+msgstr ""
+
+#: search.php:18
+#, php-format
+msgid "Results for: <strong>%s</strong>"
+msgstr ""
+
+#: searchform.php:2
+msgid "Search ..."
+msgstr ""
+
+#: single.php:66 single.php:81
+msgid "Post reactions"
+msgstr ""
+
+#: tpl-frontend-editor.php:55
+msgid "Enter title here"
+msgstr ""
+
+#: tpl-frontend-editor.php:59
+msgid "Enter excerpt here"
+msgstr ""
+
+#: tpl-frontend-editor.php:85
+msgid "Post updated!"
+msgstr ""
+
+#: tpl-frontend-editor.php:85
+msgid "View Post"
+msgstr ""
+
+#: tpl-frontend-editor.php:88 tpl-profile-edit.php:114
+msgid "Warning!"
+msgstr ""
+
+#: tpl-frontend-editor.php:88 tpl-profile-edit.php:114
+msgid "Please try again!"
+msgstr ""
+
+#: tpl-frontend-editor.php:92
+msgid "Save Post"
+msgstr ""
+
+#: tpl-frontend-editor.php:94
+msgid "Cancel"
+msgstr ""
+
+#: tpl-frontend-editor.php:97
+msgid "Featured Image"
+msgstr ""
+
+#: tpl-frontend-editor.php:101 tpl-frontend-editor.php:102
+msgid "Set featured image"
+msgstr ""
+
+#: tpl-frontend-editor.php:101
+msgid "Remove featured image"
+msgstr ""
+
+#: tpl-frontend-editor.php:107
+msgid "Categories"
+msgstr ""
+
+#: tpl-profile-edit.php:25 includes/Pressgrid.php:99
+msgid "Edit Profile"
+msgstr ""
+
+#: tpl-profile-edit.php:34
+msgid "Change Avatar"
+msgstr ""
+
+#: tpl-profile-edit.php:35
+msgid ""
+"Note: Avatar is auto taken in Gravatar.com. If you insert your registered "
+"email in our email section then you uploaded avatar will be displayed in "
+"this section."
+msgstr ""
+
+#: tpl-profile-edit.php:40
+msgid "First name"
+msgstr ""
+
+#: tpl-profile-edit.php:42
+msgid "Type first name"
+msgstr ""
+
+#: tpl-profile-edit.php:46
+msgid "Last name"
+msgstr ""
+
+#: tpl-profile-edit.php:48
+msgid "Type last name"
+msgstr ""
+
+#: tpl-profile-edit.php:52
+msgid "E-mail"
+msgstr ""
+
+#: tpl-profile-edit.php:54
+msgid "Type e-mail"
+msgstr ""
+
+#: tpl-profile-edit.php:60
+msgid "Type Website"
+msgstr ""
+
+#: tpl-profile-edit.php:64
+msgid "Facebook URL"
+msgstr ""
+
+#: tpl-profile-edit.php:66
+msgid "Type Facebook URL"
+msgstr ""
+
+#: tpl-profile-edit.php:70
+msgid "Twitter URL"
+msgstr ""
+
+#: tpl-profile-edit.php:72
+msgid "Type Twitter URL"
+msgstr ""
+
+#: tpl-profile-edit.php:77
+msgid "Biographical Info"
+msgstr ""
+
+#: tpl-profile-edit.php:79
+msgid "Type Biographical Info"
+msgstr ""
+
+#: tpl-profile-edit.php:84
+msgid "New password"
+msgstr ""
+
+#: tpl-profile-edit.php:86
+msgid "Type new password"
+msgstr ""
+
+#: tpl-profile-edit.php:90
+msgid "Confirm password"
+msgstr ""
+
+#: tpl-profile-edit.php:92
+msgid "Type confirm password"
+msgstr ""
+
+#: tpl-profile-edit.php:101
+msgid "Update profile"
+msgstr ""
+
+#: tpl-profile-edit.php:111
+msgid "Success!"
+msgstr ""
+
+#: tpl-profile-edit.php:111
+msgid "Updated profile"
+msgstr ""
+
+#: tpl-reaction.php:30
+msgid "Filter by"
+msgstr ""
+
+#: framework/classes/class.import.data.php:133
+msgid "Demo Data Imported."
+msgstr ""
+
+#: framework/classes/class.import.data.php:155
+#: framework/classes/class.import.data.php:175
+msgid "Choose Demo Data:"
+msgstr ""
+
+#: framework/classes/class.import.data.php:181
+msgid "Import Attachments:"
+msgstr ""
+
+#: framework/classes/class.import.data.php:185
+msgid "Download and demo data attachments."
+msgstr ""
+
+#: framework/classes/class.import.data.php:190
+msgid "Import customizer options:"
+msgstr ""
+
+#: framework/classes/class.import.data.php:194
+msgid "Please backup your current setup of your Theme Options."
+msgstr ""
+
+#: framework/classes/class.import.data.php:199
+msgid "Import Widgets:"
+msgstr ""
+
+#: framework/classes/class.import.data.php:203
+msgid "Import Demo Site Widgets"
+msgstr ""
+
+#: framework/classes/class.import.data.php:208
+msgid "Import Sliders Data:"
+msgstr ""
+
+#: framework/classes/class.import.data.php:212
+msgid "Import Premium Sliders which is used on Demo Sites"
+msgstr ""
+
+#: framework/classes/class.import.data.php:232
+msgid "Demo Data Importer"
+msgstr ""
+
+#: framework/classes/class.import.data.php:232
+msgid "Import Demo Data"
+msgstr ""
+
+#: framework/classes/class.render.meta.fields.php:117
+msgid "Choose page..."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:336
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:337
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:338
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:340
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:345
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:350
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:355
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:365
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:384
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:385
+#: framework/classes/class.tgm.plugin.activation.php:911
+#: framework/classes/class.tgm.plugin.activation.php:2611
+#: framework/classes/class.tgm.plugin.activation.php:3648
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:386
+#: framework/classes/class.tgm.plugin.activation.php:3234
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:387
+#: framework/classes/class.tgm.plugin.activation.php:3027
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:388
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:389
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:390
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:391
+msgid "Dismiss this notice"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:392
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:393
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:596
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:597
+msgid "Update Required"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:714
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:1018
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:1018
+#: framework/classes/class.tgm.plugin.activation.php:1021
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:1021
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:1205
+#: framework/classes/class.tgm.plugin.activation.php:3023
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2065
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2356
+msgid "Required"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2359
+msgid "Recommended"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2375
+msgid "WordPress Repository"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2378
+msgid "External Source"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2381
+msgid "Pre-Packaged"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2398
+msgid "Not Installed"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2402
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2404
+msgid "Active"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2410
+msgid "Required Update not Available"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2413
+msgid "Requires Update"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2416
+msgid "Update recommended"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2424
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2469
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2472
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2475
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2478
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2560
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2568
+msgid "Installed version:"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2576
+msgid "Minimum required version:"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2588
+msgid "Available version:"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2611
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2625
+msgid "Plugin"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2626
+msgid "Source"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2627
+msgid "Type"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2631
+msgid "Version"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2632
+msgid "Status"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2680
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2684
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2689
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2759
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2792
+msgid "Install"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2798
+msgid "Update"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2801
+msgid "Activate"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2832
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2834
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2875
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2877
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:2983
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3009
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3233
+msgid "Plugin activation failed."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3572
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3574
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3575
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3579
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3580
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3580
+#: framework/classes/class.tgm.plugin.activation.php:3586
+msgid "Show Details"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3580
+#: framework/classes/class.tgm.plugin.activation.php:3586
+msgid "Hide Details"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3581
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3582
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3585
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3586
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3587
+msgid "All installations have been completed."
+msgstr ""
+
+#: framework/classes/class.tgm.plugin.activation.php:3588
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:52
+#: framework/classes/class.wp.customize.controls.php:91
+msgid "Remove"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:260
+#: framework/classes/class.wp.customize.controls.php:353
+#: includes/customizer.php:318 includes/customizer.php:395
+msgid "Ultra Light"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:261
+#: framework/classes/class.wp.customize.controls.php:354
+#: includes/customizer.php:319 includes/customizer.php:396
+msgid "Thin"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:262
+#: framework/classes/class.wp.customize.controls.php:355
+#: includes/customizer.php:320 includes/customizer.php:397
+msgid "Light"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:263
+#: framework/classes/class.wp.customize.controls.php:356
+#: includes/customizer.php:321 includes/customizer.php:398
+msgid "Regular"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:264
+#: framework/classes/class.wp.customize.controls.php:357
+#: includes/customizer.php:322 includes/customizer.php:399
+msgid "Medium"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:265
+#: framework/classes/class.wp.customize.controls.php:358
+#: includes/customizer.php:323 includes/customizer.php:400
+msgid "Semibold"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:266
+#: framework/classes/class.wp.customize.controls.php:359
+#: includes/customizer.php:324 includes/customizer.php:401
+msgid "Bold"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:267
+#: framework/classes/class.wp.customize.controls.php:360
+#: includes/customizer.php:325 includes/customizer.php:402
+msgid "Heavy"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:268
+#: framework/classes/class.wp.customize.controls.php:361
+#: includes/customizer.php:326 includes/customizer.php:403
+msgid "Black"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:335
+msgid "Font Family:"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:342
+msgid "Font Style:"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:344
+msgid "Normal"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:345
+msgid "Italic"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:346
+msgid "Oblique"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:351
+msgid "Font Weight:"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:366
+msgid "Font Size:"
+msgstr ""
+
+#: framework/classes/class.wp.customize.controls.php:373
+msgid "Line Height:"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:134
+msgid "Could not open the file for parsing"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:170
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:243
+#, php-format
+msgid ""
+"This WXR file (version %s) is newer than the importer (version %s) and may "
+"not be supported. Please consider updating."
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:392
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:452
+msgid "Invalid author mapping"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:553
+msgid "Cannot import auto-draft posts"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:641
+#, php-format
+msgid "Failed to import \"%s\": Invalid post type %s"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:651
+#, php-format
+msgid "%s \"%s\" already exists."
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:724
+#, php-format
+msgid "Skipping attachment \"%s\", fetching attachments disabled"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:738
+#, php-format
+msgid "Failed to import \"%s\" (%s)"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:759
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1541
+#, php-format
+msgid "Imported \"%s\" (%s)"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:764
+#, php-format
+msgid "Post %d remapped to %d"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:909
+msgid "Invalid file type"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1380
+#, php-format
+msgid "Failed to import user \"%s\""
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1393
+#, php-format
+msgid "Imported user \"%s\""
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1397
+#, php-format
+msgid "User %d remapped to %d"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1526
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1546
+#, php-format
+msgid "Term %d remapped to %d"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1590
+#, php-format
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1603
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1608
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1614
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1635
+#, php-format
+msgid "Running post-processing for post %d"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1649
+#, php-format
+msgid "Could not find the post parent for \"%s\" (post #%d)"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1654
+#, php-format
+msgid "Post %d was imported with parent %d, but could not be found"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1669
+#, php-format
+msgid "Could not find the author for \"%s\" (post #%d)"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1674
+#, php-format
+msgid "Post %d was imported with author \"%s\", but could not be found"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1700
+#, php-format
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1711
+#, php-format
+msgid "Could not update \"%s\" (post #%d) with mapped data"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1756
+#, php-format
+msgid "Could not find the menu object for \"%s\" (post #%d)"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1761
+#, php-format
+msgid ""
+"Post %d was imported with object \"%d\" of type \"%s\", but could not be "
+"found"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1784
+#, php-format
+msgid "Could not find the comment parent for comment #%d"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1788
+#, php-format
+msgid "Comment %d was imported with parent %d, but could not be found"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1803
+#, php-format
+msgid "Could not find the author for comment #%d"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1807
+#, php-format
+msgid "Comment %d was imported with author %d, but could not be found"
+msgstr ""
+
+#: framework/classes/lib/wxr-importer/class-wxr-importer.php:1824
+#, php-format
+msgid "Could not update comment #%d with mapped data"
+msgstr ""
+
+#: framework/functions/functions.breadcrumb.php:79
+msgid "Error 404: Page not found"
+msgstr ""
+
+#: framework/functions/functions.breadcrumb.php:80
+msgid "Archives for"
+msgstr ""
+
+#: framework/functions/functions.breadcrumb.php:82
+msgid "You searched for"
+msgstr ""
+
+#: includes/customizer.php:20
+msgid "Colors"
+msgstr ""
+
+#: includes/customizer.php:28
+msgid "General Option"
+msgstr ""
+
+#: includes/customizer.php:35
+msgid "Brand Color"
+msgstr ""
+
+#: includes/customizer.php:42
+msgid "Title color"
+msgstr ""
+
+#: includes/customizer.php:48
+msgid "Text color"
+msgstr ""
+
+#: includes/customizer.php:55
+msgid "Second color"
+msgstr ""
+
+#: includes/customizer.php:62
+msgid "Body Background"
+msgstr ""
+
+#: includes/customizer.php:69
+msgid "Content Background Color"
+msgstr ""
+
+#: includes/customizer.php:78
+msgid "Topbar Colors"
+msgstr ""
+
+#: includes/customizer.php:85
+msgid "Topbar Background Color"
+msgstr ""
+
+#: includes/customizer.php:92
+msgid "Topbar Text Color"
+msgstr ""
+
+#: includes/customizer.php:99
+msgid "Topbar Border Color"
+msgstr ""
+
+#: includes/customizer.php:108
+msgid "Header"
+msgstr ""
+
+#: includes/customizer.php:115
+msgid "Header Background Color"
+msgstr ""
+
+#: includes/customizer.php:122
+msgid "Logo Text Color"
+msgstr ""
+
+#: includes/customizer.php:129
+msgid "Menu Text Color"
+msgstr ""
+
+#: includes/customizer.php:136
+msgid "Menu Hover Color"
+msgstr ""
+
+#: includes/customizer.php:143
+msgid "Sub Menu Background Color"
+msgstr ""
+
+#: includes/customizer.php:150
+msgid "Sub Menu Text Color"
+msgstr ""
+
+#: includes/customizer.php:159
+msgid "Search Popup"
+msgstr ""
+
+#: includes/customizer.php:166 includes/customizer.php:188
+msgid "Background Color"
+msgstr ""
+
+#: includes/customizer.php:173 includes/customizer.php:195
+msgid "Text Color"
+msgstr ""
+
+#: includes/customizer.php:181 includes/customizer.php:573
+msgid "Footer"
+msgstr ""
+
+#: includes/customizer.php:207
+msgid "Font"
+msgstr ""
+
+#: includes/customizer.php:213
+msgid "Content Text Font"
+msgstr ""
+
+#: includes/customizer.php:220
+msgid "Title Font"
+msgstr ""
+
+#: includes/customizer.php:226
+msgid "Text Font"
+msgstr ""
+
+#: includes/customizer.php:232
+msgid "Second Font"
+msgstr ""
+
+#: includes/customizer.php:240
+msgid "General Text Font"
+msgstr ""
+
+#: includes/customizer.php:247
+msgid "Topbar Text Font"
+msgstr ""
+
+#: includes/customizer.php:253
+msgid "Logo Text Font"
+msgstr ""
+
+#: includes/customizer.php:260
+msgid "Menu Font"
+msgstr ""
+
+#: includes/customizer.php:267
+msgid "Footer Text Font"
+msgstr ""
+
+#: includes/customizer.php:279
+msgid "Header Styles"
+msgstr ""
+
+#: includes/customizer.php:286
+msgid "Logo Image"
+msgstr ""
+
+#: includes/customizer.php:292
+msgid "Favicon"
+msgstr ""
+
+#: includes/customizer.php:301
+msgid "Topbar Options"
+msgstr ""
+
+#: includes/customizer.php:308
+msgid "Topbar Height"
+msgstr ""
+
+#: includes/customizer.php:314
+msgid "Topbar font weight"
+msgstr ""
+
+#: includes/customizer.php:333
+msgid "Topbar Font Size"
+msgstr ""
+
+#: includes/customizer.php:342
+msgid "Header Options"
+msgstr ""
+
+#: includes/customizer.php:348
+msgid "Header Background Color Alpha"
+msgstr ""
+
+#: includes/customizer.php:369
+msgid "Header Height"
+msgstr ""
+
+#: includes/customizer.php:375
+msgid "Logo Width"
+msgstr ""
+
+#: includes/customizer.php:385
+msgid "Menu Options"
+msgstr ""
+
+#: includes/customizer.php:391
+msgid "Menu font weight"
+msgstr ""
+
+#: includes/customizer.php:410
+msgid "Menu Font Size"
+msgstr ""
+
+#: includes/customizer.php:417
+msgid "Menu Items Space"
+msgstr ""
+
+#: includes/customizer.php:429
+msgid "Content Options"
+msgstr ""
+
+#: includes/customizer.php:435
+msgid "Content Option"
+msgstr ""
+
+#: includes/customizer.php:441
+msgid "Content Date - Human Readablity"
+msgstr ""
+
+#: includes/customizer.php:448
+msgid "Content Font Size"
+msgstr ""
+
+#: includes/customizer.php:454
+msgid "Content Text Line Height"
+msgstr ""
+
+#: includes/customizer.php:460
+msgid "Content Margin"
+msgstr ""
+
+#: includes/customizer.php:470 includes/customizer.php:475
+msgid "Home Slider"
+msgstr ""
+
+#: includes/customizer.php:491
+msgid "Frontend Option"
+msgstr ""
+
+#: includes/customizer.php:497
+msgid "Frontend Post Status"
+msgstr ""
+
+#: includes/customizer.php:501
+msgid "Draft"
+msgstr ""
+
+#: includes/customizer.php:502
+msgid "Publish"
+msgstr ""
+
+#: includes/customizer.php:514
+msgid "Social Links"
+msgstr ""
+
+#: includes/customizer.php:578
+msgid "Footer Logo Image"
+msgstr ""
+
+#: includes/customizer.php:585
+msgid "Footer Font Size"
+msgstr ""
+
+#: includes/customizer.php:591
+msgid "Footer Padding"
+msgstr ""
+
+#: includes/customizer.php:599
+msgid "CopyRight Content"
+msgstr ""
+
+#: includes/customizer.php:600
+msgid "Copyright 2017 &copy; Themeton | All Rights Reserved."
+msgstr ""
+
+#: includes/customizer.php:614
+msgid "Extras"
+msgstr ""
+
+#: includes/customizer.php:615
+msgid "Export Import and Custom CSS."
+msgstr ""
+
+#: includes/customizer.php:621
+msgid "Settings"
+msgstr ""
+
+#: includes/customizer.php:626
+msgid "Customizer Transport"
+msgstr ""
+
+#: includes/customizer.php:627
+msgid ""
+"Transport setting for customizer event when you change customizer element "
+"value."
+msgstr ""
+
+#: includes/customizer.php:631
+msgid "Refresh when change value"
+msgstr ""
+
+#: includes/customizer.php:632
+msgid "Collect changes until save"
+msgstr ""
+
+#: includes/customizer.php:637
+msgid "Pre Loader Disable"
+msgstr ""
+
+#: includes/customizer.php:648 includes/customizer.php:654
+msgid "Custom Sidebars"
+msgstr ""
+
+#: includes/customizer.php:655
+msgid "Enter sidebar id seperate by "
+msgstr ""
+
+#: includes/customizer.php:665
+msgid "Export/Import"
+msgstr ""
+
+#: includes/customizer.php:670
+msgid "Export Data"
+msgstr ""
+
+#: includes/customizer.php:671
+msgid "Copy to Customizer Data"
+msgstr ""
+
+#: includes/customizer.php:677
+msgid "Import Data"
+msgstr ""
+
+#: includes/customizer.php:678
+msgid "Import Customizer Exported Data"
+msgstr ""
+
+#: includes/customizer.php:688
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/customizer.php:693
+msgid "Custom CSS (general)"
+msgstr ""
+
+#: includes/customizer.php:699
+msgid "Tablet CSS"
+msgstr ""
+
+#: includes/customizer.php:700
+msgid "Screen width between 768px and 991px."
+msgstr ""
+
+#: includes/customizer.php:706
+msgid "Wide Phone CSS"
+msgstr ""
+
+#: includes/customizer.php:707
+msgid "Screen width between 481px and 767px. Ex: iPhone landscape."
+msgstr ""
+
+#: includes/customizer.php:713
+msgid "Phone CSS"
+msgstr ""
+
+#: includes/customizer.php:714
+msgid "Screen width up to 480px. Ex: iPhone portrait."
+msgstr ""
+
+#: includes/ExtendVCRow.php:88
+msgid "Parallax columns container"
+msgstr ""
+
+#: includes/ExtendVCRow.php:91
+msgid "None"
+msgstr ""
+
+#: includes/ExtendVCRow.php:92
+msgid "Parallax - Default"
+msgstr ""
+
+#: includes/ExtendVCRow.php:93
+msgid "Parallax - Fast and Slow"
+msgstr ""
+
+#: includes/ExtendVCRow.php:101
+msgid "Parallax Column Option"
+msgstr ""
+
+#: includes/ExtendVCRow.php:104
+msgid "Parallax Column"
+msgstr ""
+
+#: includes/ExtendVCRow.php:105
+msgid "Parallax Content"
+msgstr ""
+
+#: includes/ExtendVCRow.php:115
+msgid "Overlay"
+msgstr ""
+
+#: includes/ExtendVCRow.php:118 includes/ExtendVCRow.php:146
+msgid "No"
+msgstr ""
+
+#: includes/ExtendVCRow.php:119 includes/ExtendVCRow.php:147
+msgid "Yes"
+msgstr ""
+
+#: includes/ExtendVCRow.php:125
+msgid "Overlay Color"
+msgstr ""
+
+#: includes/ExtendVCRow.php:133
+msgid "Overlay Opacity"
+msgstr ""
+
+#: includes/ExtendVCRow.php:143
+msgid "One Page Section"
+msgstr ""
+
+#: includes/ExtendVCRow.php:153
+msgid "Section Label"
+msgstr ""
+
+#: includes/ExtendVCRow.php:161
+msgid "Section slug"
+msgstr ""
+
+#: includes/ExtendVCRow.php:162
+msgid ""
+"Don't need hash tag (#). You can apply a custom link ( with http:// or "
+"https:// ) to redirect."
+msgstr ""
+
+#: includes/ExtendVCRow.php:174
+msgid "Current Theme Tab Style"
+msgstr ""
+
+#: includes/ExtendVCRow.php:177 includes/ExtendVCRow.php:199
+msgid "Default"
+msgstr ""
+
+#: includes/ExtendVCRow.php:178
+msgid "Vertical Line"
+msgstr ""
+
+#: includes/ExtendVCRow.php:184
+msgid "Current theme Text Style"
+msgstr ""
+
+#: includes/ExtendVCRow.php:187
+msgid "Text Black"
+msgstr ""
+
+#: includes/ExtendVCRow.php:188
+msgid "Text White"
+msgstr ""
+
+#: includes/ExtendVCRow.php:196
+msgid "Sidebar Style"
+msgstr ""
+
+#: includes/ExtendVCRow.php:200
+msgid "Style 1"
+msgstr ""
+
+#: includes/ExtendVCRow.php:201
+msgid "Style 2"
+msgstr ""
+
+#: includes/mega-menu/index.php:18
+msgid "Active Mega Menu"
+msgstr ""
+
+#: includes/mega-menu/index.php:25
+msgid "Vertical Submenu for Mega menu"
+msgstr ""
+
+#: includes/mega-menu/index.php:128 includes/mega-menu/index.php:196
+msgid "Proportion"
+msgstr ""
+
+#: includes/mega-menu/index.php:167
+msgid "More"
+msgstr ""
+
+#: includes/meta.page.php:82
+msgid "Page Layout"
+msgstr ""
+
+#: includes/meta.page.php:89
+msgid "Select Page Layout (Fullwidth | Right Sidebar | Left Sidebar)"
+msgstr ""
+
+#: includes/meta.page.php:95
+msgid "Page Title Show"
+msgstr ""
+
+#: includes/plugins.php:18
+msgid "Themeton Reaction"
+msgstr ""
+
+#: includes/Pressgrid.php:96
+msgid "Frontend Editor"
+msgstr ""
+
+#: includes/Pressgrid.php:102
+msgid "Reacted Posts"
+msgstr ""
+
+#: includes/Pressgrid.php:105
+msgid "Filter by Reaction"
+msgstr ""
+
+#: includes/RestAP.php:12 includes/RestAP.php:41
+msgid "Load more"
+msgstr ""
+
+#: includes/RestAP.php:13 includes/RestAP.php:42
+msgid "No more posts"
+msgstr ""
+
+#: includes/RestAP.php:104
+msgid "No Reaction Yet"
+msgstr ""
+
+#: includes/template-tags.php:118
+msgid "Like"
+msgstr ""
+
+#: includes/template-tags.php:119
+msgid "Haha"
+msgstr ""
+
+#: includes/template-tags.php:120
+msgid "Love"
+msgstr ""
+
+#: includes/template-tags.php:121
+msgid "Sad"
+msgstr ""
+
+#: includes/template-tags.php:122
+msgid "Angry"
+msgstr ""
+
+#: includes/template-tags.php:483
+msgid "Related Posts"
+msgstr ""
+
+#: includes/template-tags.php:511
+msgid "Shop"
+msgstr ""
+
+#: includes/template-tags.php:513
+msgid "Shop Details"
+msgstr ""
+
+#: includes/template-tags.php:518
+#, php-format
+msgid "Category: <span>%s</span>"
+msgstr ""
+
+#: includes/template-tags.php:522
+#, php-format
+msgid "For: <span>%s</span>"
+msgstr ""
+
+#: includes/template-tags.php:529
+msgid "Blog"
+msgstr ""
+
+#: includes/template-tags.php:531
+msgid "Projects"
+msgstr ""
+
+#: includes/template-tags.php:540
+msgid "404 Page"
+msgstr ""
+
+#: includes/widgets/address.php:6
+msgid "Contact Address."
+msgstr ""
+
+#: includes/widgets/address.php:7
+msgid ": Address"
+msgstr ""
+
+#: includes/widgets/address.php:27
+msgid "Address"
+msgstr ""
+
+#: includes/widgets/address.php:28
+msgid "Phone"
+msgstr ""
+
+#: includes/widgets/address.php:29 template-parts/user-login.php:49
+msgid "Email"
+msgstr ""
+
+#: includes/widgets/address.php:30
+msgid "Work hours"
+msgstr ""
+
+#: includes/widgets/address.php:65 includes/widgets/nav-menus.php:89
+#: includes/widgets/recent-posts.php:146
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/address.php:69
+msgid "Address:"
+msgstr ""
+
+#: includes/widgets/address.php:73
+msgid "Phone:"
+msgstr ""
+
+#: includes/widgets/address.php:77
+msgid "Email:"
+msgstr ""
+
+#: includes/widgets/address.php:81
+msgid "Work hours:"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:7
+msgid "Add a custom menu to your sidebar."
+msgstr ""
+
+#: includes/widgets/nav-menus.php:10
+msgid ": Menu for Push Sidebar"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:85
+msgid "No menus have been created yet."
+msgstr ""
+
+#: includes/widgets/nav-menus.php:85
+msgid "Create some"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:93
+msgid "Select Menu:"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:95
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:104
+msgid "Menu output style:"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:106
+msgid "Small Menu"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:107
+msgid "Medium Menu + Icon"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:108
+msgid "Big Menu"
+msgstr ""
+
+#: includes/widgets/nav-menus.php:113
+msgid "Edit Menu"
+msgstr ""
+
+#: includes/widgets/recent-posts.php:6
+msgid "Recent posts."
+msgstr ""
+
+#: includes/widgets/recent-posts.php:7
+msgid ": Recent Posts"
+msgstr ""
+
+#: includes/widgets/recent-posts.php:60 includes/widgets/recent-posts.php:93
+msgid "Thumb"
+msgstr ""
+
+#: includes/widgets/recent-posts.php:76 includes/widgets/recent-posts.php:90
+msgid "read the article"
+msgstr ""
+
+#: includes/widgets/social-links.php:27
+msgid "Displays your social profile."
+msgstr ""
+
+#: includes/widgets/social-links.php:29
+msgid ": Social Links"
+msgstr ""
+
+#: includes/widgets/social-links.php:81
+msgid "Widget Title:"
+msgstr ""
+
+#: template-parts/user-login.php:14
+msgid "My profile"
+msgstr ""
+
+#: template-parts/user-login.php:18
+msgid "My settings"
+msgstr ""
+
+#: template-parts/user-login.php:22
+msgid "Add Post"
+msgstr ""
+
+#: template-parts/user-login.php:27
+msgid "Log out"
+msgstr ""
+
+#: template-parts/user-login.php:38
+msgid "sign in"
+msgstr ""
+
+#: template-parts/user-login.php:39
+msgid "sign up"
+msgstr ""
+
+#: template-parts/user-login.php:45 template-parts/user-login.php:46
+#: template-parts/user-login.php:69 template-parts/user-login.php:70
+msgid "Username"
+msgstr ""
+
+#: template-parts/user-login.php:50
+msgid "Enter email"
+msgstr ""
+
+#: template-parts/user-login.php:51
+msgid "A password will be e-mailed to you."
+msgstr ""
+
+#: template-parts/user-login.php:57
+msgid "Register"
+msgstr ""
+
+#: template-parts/user-login.php:73 template-parts/user-login.php:74
+msgid "Password"
+msgstr ""
+
+#: template-parts/user-login.php:80
+msgid "Login"
+msgstr ""
+
+#: template-parts/user-login.php:86
+msgid "Username or E-mail:"
+msgstr ""
+
+#: template-parts/user-login.php:87
+msgid "Username or Email"
+msgstr ""
+
+#: template-parts/user-login.php:89
+msgid "Recover password"
+msgstr ""
+
+#: template-parts/user-login.php:102
+msgid "or"
+msgstr ""

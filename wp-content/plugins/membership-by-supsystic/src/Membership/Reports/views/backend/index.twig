@@ -1,0 +1,148 @@
+{% extends "@base/layouts/backend.twig" %}
+{% import "@base/macros/options.twig" as options %}
+
+{% block mainHeader %}
+    <h2 class="sc-header">{{ translate('Reports') }}</h2>
+{% endblock %}
+
+{% block main %}
+    <div class="mp-option" id="search">
+        <div class="row">
+            <div class="col-md-2">
+                {{ options.label(translate('Search')) }}
+            </div>
+            <div class="col-md-4">
+                <div class="report-filter search">
+                    <input class="sc-input" name="search">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="sc-button primary">{{ translate('Search') }}</button>
+            </div>
+        </div>
+    </div>
+
+    <table class="sc-table reports" data-translate="{{ {
+	    'Read': translate('Read'),
+	    'Unread': translate('Unread'),
+	    'Mark as read and close': translate('Mark as read and close'),
+	    'Mark as unread and close': translate('Mark as unread and close'),
+	    'Close': translate('Close'),
+	    'User is not found': translate('User is not found'),
+	    'Activity is not found': translate('Activity is not found'),
+    }|json_encode|e }}">
+        <tr>
+	        <th><a href="{{ reportsUrl ~ '&order_by=id&order=' ~ (request.query.get('order') == 'asc' ? 'desc' : 'asc') }}">#</a></th>
+	        <th><a href="{{ reportsUrl ~ '&order_by=content_type&order=' ~ (request.query.get('order') == 'asc' ? 'desc' : 'asc') }}">{{ translate('Report type') }}</a></th>
+	        <th><a href="{{ reportsUrl ~ '&order_by=reporter_id&order=' ~ (request.query.get('order') == 'asc' ? 'desc' : 'asc') }}">{{ translate('Reporter') }}</a></th>
+	        {#<th>{{ translate('Content') }}</th>#}
+	        <th><a href="{{ reportsUrl ~ '&order_by=reported_id&order=' ~ (request.query.get('order') == 'asc' ? 'desc' : 'asc') }}">{{ translate('Reported') }}</a></th>
+	        <th>{{ translate('Report Comment') }}</th>
+	        <th><a href="{{ reportsUrl ~ '&order_by=date&order=' ~ (request.query.get('order') == 'asc' ? 'desc' : 'asc') }}">{{ translate('Report Date') }}</a></th>
+	        <th><a href="{{ reportsUrl ~ '&order_by=status&order=' ~ (request.query.get('order') == 'asc' ? 'desc' : 'asc') }}">{{ translate('Report Status') }}</a></th>
+	        <th></th>
+        </tr>
+	    
+        {% for report in reports %}
+        <tr class="report"
+            data-report-id="{{ report.id }}"
+            data-report="{{ report|json_encode }}"
+        >
+	        <td>
+		        {{  report.id }}
+	        </td>
+	        <td>
+		        <div class="content-type">
+			        {% if report.content_type == 'activity' %}
+				        {{ translate('Activity Report') }}
+			        {% elseif report.content_type == 'user' %}
+				        {{ translate('User Report') }}
+			        {% endif %}
+		        </div>
+	        </td>
+	        <td>
+		        <div class="reporter">
+			        {% if report.reporter %}
+				        <a target="_blank" href="{{ report.reporter.url }}">{{ report.reporter.displayName }}</a>
+				        <a target="_blank" href="{{ report.reporter.editLink }}"><small>({{ translate('Edit profile') }})</small></a>
+			        {% else %}
+				        {{ translate('User with id %d is not found')|format(report.reporter_id) }}
+			        {% endif %}
+		        </div>
+	        </td>
+	        {#<td>#}
+	        {#<div class="content">#}
+	        {#{% if report.content_type == 'activity' %}#}
+	        {#{{ report.reported.data|slice(0, 80) }}#}
+	        {#{% endif %}#}
+	        {#</div>#}
+	        {#</td>#}
+	        <td>
+		        <div class="reported">
+			        {% if report.content_type == 'activity' %}
+				        {% if report.reported %}
+					        <a target="_blank" href="{{ report.reported.url }}">{{ translate('Link') }}</a>
+				        {% else %}
+					        {{ translate('Activity with id %d is not found')|format(report.reported_id) }}
+				        {% endif %}
+			        {% elseif report.content_type == 'user' %}
+				        {% if report.reported %}
+					        <a target="_blank" href="{{ profileUrl(report.reported) }}">{{ report.reported.displayName }}</a>
+					        <a target="_blank" href="{{ report.reported.editLink }}"><small>({{ translate('Edit') }})</small></a>
+				        {% else %}
+					        {{ translate('User with id %d is not found')|format(report.reported_id) }}
+				        {% endif %}
+			        {% endif %}
+		        </div>
+	        </td>
+	        <td>
+		        <div class="comment">{{ truncate(report.comment, 80) }}</div>
+	        </td>
+	        <td>
+                <div class="date">{{ report.date }}</div>
+            </td>
+	        <td>
+		        <div class="status">
+					{% if report.status != 'new' %}
+			        	{{ translate('Read') }}
+					{% else %}
+			        	{{ translate('Unread') }}
+					{% endif %}
+		        </div>
+	        </td>
+            <td>
+                <div class="info">
+                    <a href="#" class="report-details">{{ translate('Details') }}</a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+	
+    <div class="sc-hidden user-report-details-template">
+        {% include '@reports/backend/partials/user-report-details.twig' %}
+    </div>
+		
+    <div class="sc-hidden activity-report-details-template">
+        {% include '@reports/backend/partials/activity-report-details.twig' %}
+    </div>
+	
+    <div class="mp-modal send-message-modal sc-hidden">
+        <div class="mp-option" id="message">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="hidden" class="user-id" name="user-id" value="">
+                    <div class="mp-option-label">
+	                    <span>{{ translate('Send message to: ') }}</span> <span class="message-recipient"></span>
+                    </div>
+                    <div class="mp-option-input">
+                        <textarea class="message-input" class="sc-input" name="" cols="35" rows="10"></textarea>
+                    </div>
+                    <div class="mp-result">
+                        <span id="message-result"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

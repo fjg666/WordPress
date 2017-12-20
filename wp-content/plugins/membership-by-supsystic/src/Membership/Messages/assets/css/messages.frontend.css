@@ -1,0 +1,170 @@
+#conversations a {
+	box-shadow: none;
+}
+
+#conversations textarea {
+    box-sizing: border-box;
+}
+
+.conversation-messages, .conversation-users {
+	min-height: 2px;
+	max-height: 300px;
+	overflow-x: hidden;
+}
+
+.conversation-messages {
+    max-width: 1127px!important;
+}
+
+.conversation .mp-message {
+	margin: 0 0.5em!important;
+}
+
+.conversation.delete-messages-action .mp-message .delete-message-column {
+    display: block!important;
+}
+
+
+#conversations .mp-message-container {
+	display: table;
+	width: 100%;
+}
+
+#conversations .mp-message-avatar, #conversations .mp-message-content {
+	display: table-cell;
+	vertical-align: top;
+}
+
+#conversations .mp-message-avatar, #conversations .mp-message-content .text {
+	margin-top: .5em;
+}
+.mp-message-avatar {
+	min-width: 65px;
+}
+
+#conversations .conversation-image {
+    overflow: hidden;
+}
+
+#conversations .mp-message-container img {
+	margin-right: auto;
+	max-width: 50px;
+}
+
+.mp-message-content {
+	width: 100%;
+}
+
+.new-conversation-container .multiple.dropdown > .image.label {
+    padding: 0.6em 0.5em;
+    font-size: 14px;
+}
+
+#conversations .conversation-image {
+	width: 50px;
+	height: 50px;
+	float: left;
+	position: relative;
+}
+
+#conversations .conversation-image.two div {
+	position: absolute;
+	width: 24px;
+	height: 100%;
+	overflow: hidden;
+}
+
+#conversations .conversation-image.two div:nth-child(2) {
+	position: absolute;
+	left: 26px;
+}
+
+#conversations .conversation-image.two div img {
+	width: 50px;
+	max-width: none;
+	position: relative;
+	left: -12px;
+}
+
+#conversations .conversation-image.many div {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+}
+
+
+#conversations .conversation-image.many div:nth-child(2) {
+	position: absolute;
+	left: 26px;
+}
+
+#conversations .conversation-image.many div:nth-child(3) {
+	position: absolute;
+	top: 26px;
+}
+
+#conversations .conversation-image.many div:nth-child(4) {
+	position: absolute;
+	top: 26px;
+	left: 26px;
+}
+
+#conversations .conversations-list .new-conversation {
+	margin-right: 10px;
+}
+
+#conversations .conversations-list .item {
+	overflow: hidden;
+	padding: 1em;
+}
+
+#conversations .conversations-list .content-data {
+	margin: 0 75px 0 50px;
+	width: 46%;
+}
+
+#conversations .conversations-list .content-info {
+	float: right;
+	white-space: nowrap;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+#conversations .conversations-list .content-info div {
+	margin-bottom: 0.5em;
+}
+
+#conversations .mp-coversation-users,
+#conversations .last-message {
+	display: block;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-overflow: "…";
+	margin: 0 1em;
+}
+
+#conversations .last-message {
+	margin-top: 0.5em
+}
+
+@media only screen and (max-width: 576px)
+{
+	.ui.grid>.six.wide.column,
+	.ui.grid>.ten.wide.column {
+		width: 100%!important;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+
+	#conversations .conversations-list {
+		min-height: 250px;
+	}
+}
+
+.conversation-delete-messages-buttons .center.container {
+	margin-bottom: 1.3em;
+	font-size: 1em;
+}

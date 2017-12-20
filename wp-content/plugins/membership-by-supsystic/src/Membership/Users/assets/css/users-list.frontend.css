@@ -1,0 +1,88 @@
+.mp-user-card a {
+	box-shadow: none;
+}
+.sc-membership .mp-user-card .header img {
+	min-height: 100px;
+}
+.mp-user-card .mp-user-avatar-container {
+	background: #fff;
+	height: 10px;
+	position: relative;
+}
+
+.mp-user-card .mp-user-avatar-container + a {
+	text-align: center;
+	margin-top: 0px !important;
+}
+
+.mp-user-card .mp-user-avatar {
+	max-width: 100px;
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+	right: 0;
+	top: -100px;
+	background: #fff;
+	border-radius: 5px;
+}
+
+.mp-user-card .mp-user-avatar img {
+	padding: 5px;
+    border-radius: 10px;
+}
+
+.mp-user-card .mp-users-list-action {
+	padding: 0 !important;
+}
+
+.mp-user-card .mp-users-list-friendship-actions {
+	display: flex;
+}
+
+
+.mp-user-card .user-action-buttons button {
+    margin-bottom: .4em;
+}
+
+.mp-user-card .mp-users-list-friendship-actions .mp-users-list-action {
+	margin: 0 14px;
+}
+
+.mp-social-stats {
+    margin-top: 1em;
+    box-shadow: none;
+}
+
+.mp-social-stats .statistic {
+    margin: 0;
+}
+
+.mp-social-stats .statistic + .statistic {
+    margin-left: 1em;
+}
+
+.mp-social-stats .ui.statistic .label {
+    font-size: 14px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+
+.sc-membership .pagination {
+	margin: 2rem auto!important;
+    align-items: center;
+}
+
+.sc-membership .pagination:before,
+.pagination:after {
+	background-color: rgba(0,0,0,0);
+}
+
+.sc-membership .pagination .item {
+	box-shadow: none;
+}
+
+.sc-membership .pagination .item.active,
+.sc-membership .pagination .item:hover {
+	box-shadow: 0 1px 0 0 currentColor;
+}

@@ -1,0 +1,398 @@
+{% extends "@base/layouts/backend.twig" %}
+{% import "@base/macros/options.twig" as options %}
+
+{% block head %}
+	<div class="sc-tabs">
+		<a href="#" class="tab active" data-target="main">
+			<i class="fa fa-group"></i>{{ translate('Main Settings') }}
+		</a>
+	</div>
+{% endblock %}
+
+{% block mainHeader %}
+	<div class="sc-header">
+		{% if mainSettings['groups'] == 'true' %}
+			<h2>{{ translate('Groups') }}</h2>
+			<button data-save-settings class="save-settings sc-button icon-button primary">
+				<i class="fa fa-save"></i><span>{{ translate('Save Settings') }}</span>
+			</button>
+		{% endif %}
+	</div>
+{% endblock %}
+
+{% block main %}
+    {% if mainSettings['groups'] == 'true' %}
+    <link rel="stylesheet" type="text/css" href="{{ assets('base', 'lib/cropper/cropper.min.css') }}">
+    <script async type="text/javascript" src="{{ assets('base', 'lib/cropper/cropper.min.js') }}"></script>
+
+	<div class="sc-tabs-container">
+			<div class="mp-options">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="mp-option" id="logo-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Group Logo Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-size'].width }}" name="logo-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-size'].height }}" name="logo-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mp-option" id="logo-large-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Logo Thumbnail Large Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-large-size'].width }}" name="logo-large-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-large-size'].height }}" name="logo-large-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mp-option" id="logo-medium-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Logo Thumbnail Medium Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-medium-size'].width }}" name="logo-medium-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-medium-size'].height }}" name="logo-medium-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mp-option" id="logo-small-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Logo Thumbnail Small Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-small-size'].width }}" name="logo-small-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['logo-small-size'].height }}" name="logo-small-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+                        {% set defaultLogo = assets('groups', 'images/group.jpg', false) %}
+
+						<div class="mp-option" id="default-logo">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Default Logo Image')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-default-image">
+										<img style="max-width:50px;max-height: 50px;"
+											src="{{ settings['default-logo'] }}"
+										>
+										<button class="mp-option-button sc-button primary mp-change">Change</button>
+										<button class="mp-option-button sc-button primary mp-set-to-default"
+											{% if defaultLogo == settings['default-logo'] or defaultLogo == setting['default-logo-source'] %}
+												style="display: none" 
+											{% endif %}
+										>Set to default</button>
+                                        <input
+                                                type="hidden"
+                                                name="default-logo"
+                                                value="{{ settings['default-logo'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-logo-large"
+                                                value="{{ settings['default-logo-large'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-logo-medium"
+                                                value="{{ settings['default-logo-medium'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-logo-small"
+                                                value="{{ settings['default-logo-small'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-logo-source"
+                                                data-default-width-input-name="logo-size[width]"
+                                                data-default-height-input-name="logo-size[height]"
+                                                data-default-crop-input-name="default-logo-crop-data"
+                                                data-default-image="{{ defaultLogo }}"
+                                                value="{{ settings['default-logo-source'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-logo-crop-data"
+                                                value="{{ settings['default-logo-crop-data'] }}"
+                                        >
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mp-option" id="cover-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Group Cover Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['cover-size'].width }}" name="cover-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['cover-size'].height }}" name="cover-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mp-option" id="cover-medium-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Cover Thumbnail Medium Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['cover-medium-size'].width }}" name="cover-medium-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['cover-medium-size'].height }}" name="cover-medium-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mp-option" id="cover-small-size">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Cover Thumbnail Small Size')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-sizes-input">
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['cover-small-size'].width }}" name="cover-small-size[width]">
+										</div>
+										<span>x</span>
+										<div class="mp-option-input">
+											<input class="sc-input" value="{{ settings['cover-small-size'].height }}" name="cover-small-size[height]">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+                        {% set defaultCover = assets('groups', 'images/group-cover.jpg', false) %}
+
+						<div class="mp-option" id="default-cover">
+							<div class="row">
+								<div class="col-md-4">
+									{{ options.label(translate('Default Cover Image')) }}
+								</div>
+								<div class="col-md-8">
+									<div class="mp-default-image">
+										<img style="max-width:50px;max-height: 50px;"
+											src="{{ settings['default-cover'] }}"
+										>
+										<button class="mp-option-button sc-button primary mp-change">Change</button>
+										<button class="mp-option-button sc-button primary mp-set-to-default"
+											{% if defaultCover == settings['default-cover'] or defaultCover == settings['default-cover-source'] %}
+												style="display: none" 
+											{% endif %}
+										>Set to default</button>
+                                        <input
+                                                type="hidden"
+                                                name="default-cover"
+                                                value="{{ settings['default-cover'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-cover-medium"
+                                                value="{{ settings['default-cover-medium'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-cover-small"
+                                                value="{{ settings['default-cover-small'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-cover-source"
+                                                data-default-image="{{ defaultCover }}"
+                                                data-default-width-input-name="cover-size[width]"
+                                                data-default-height-input-name="cover-size[height]"
+                                                data-default-crop-input-name="default-cover-crop-data"
+                                                value="{{ settings['default-cover-source'] }}"
+                                        >
+                                        <input
+                                                type="hidden"
+                                                name="default-cover-crop-data"
+                                                value="{{ settings['default-cover-crop-data'] }}"
+                                        >
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{% set permalinks = [
+							{
+								'value': 'groupalias',
+								'title': translate('Group alias'),
+								'selected': settings['permalink-base'] == 'groupalias'
+							},
+							{
+								'value': 'id',
+								'title': translate('Group ID'),
+								'selected': settings['permalink-base'] == 'id'
+							},
+						] %}
+
+						{{ options.selectRow(
+							translate('Group Permalink Base'),
+							permalinks,
+							'permalink-base',
+							'permalink-base'
+						) }}
+
+                        {% set _roles = [] %}
+
+                        {% for value, role in roles %}
+                            {% set _roles = _roles|merge([{
+                            'title': role.name,
+                            'value': value,
+                            'selected': settings['roles-to-invite'] == value,
+                            }]) %}
+                        {% endfor %}
+
+						{% set _types = [{
+                            'label': translate('All'),
+                            'name': 'inviting-type',
+                            'value': 'all',
+                            'checked': settings['inviting-type'] == 'all'
+                            },
+                            {
+                            'label': translate('Specific roles'),
+                            'name': 'inviting-type',
+                            'value': 'specific_roles',
+                            'checked': settings['inviting-type'] == 'specific_roles'
+                            }] %}
+
+					
+						<h3>{{ translate('Group invites') }}</h3>
+						
+						<div class="mp-option" id="inviting-type">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="mp-option-label inviting-type-label">
+										<span title="{{ translate('Who can invite') }}">{{ translate('Who can invite') }}</span>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="mp-option-controls">
+										{% for radio in _types %}
+											<label class="sc-radio">
+												<input
+														type="radio"
+														name="{{ radio.name }}"
+														value="{{ radio.value }}"
+														{% if radio.checked %}
+															checked
+														{% endif %}
+												>
+												{{ radio.label }}
+												<div class="sc-radio-state"></div>
+											</label>
+										{% endfor %}
+									</div>
+									<div class="mp-option-select inviting-type-roles">
+										<select class="sc-input" name="inviting-type-roles[]" multiple>
+											{% for option in _roles %}
+												<option value="{{ option.value }}"
+														{% if option.selected %}
+															selected
+														{% endif %}
+														{% if option.disabled %}
+															disabled
+														{% endif %}
+												>{{ option.title }}</option>
+											{% endfor %}
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mp-option" id="roles-to-invite">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="mp-option-label">
+										<span title="{{ translate('Who can be invited') }}">{{ translate('Who can be invited') }}</span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<select class="sc-input" name="roles-to-invite">
+										<option value="everyone"
+												{% if settings['roles-to-invite'] == 'everyone' %}
+													selected
+												{% endif %}
+										>{{ translate('Everyone') }}</option>
+										{% if mainSettings['friends'] == 'true' %}
+											<option value="friends-only"
+													{% if settings['roles-to-invite'] == 'friends-only' %}
+														selected
+													{% endif %}
+											>{{ translate('Friends only') }}</option>
+										{% endif %}
+									</select>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	{% else %}
+		<div>
+			<span>{{ translate('Groups option is Turn Off, you can turn it On on the Main settings tab or click <a href="%s">here</a>.')|format(mainSettingsLink)|raw }}</span>
+		</div>
+    {% endif %}
+{% endblock %}

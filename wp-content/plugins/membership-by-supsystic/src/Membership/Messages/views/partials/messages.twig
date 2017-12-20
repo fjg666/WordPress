@@ -1,0 +1,30 @@
+{% spaceless %}
+	{% for message in messages %}
+		<div class="mp-message ui vertical segment" data-id="{{ message.id }}" data-state="{{ message.message_state }}">
+			<div class="ui equal width grid">
+				<div class="one wide column delete-message-column" style="display: none">
+					<div class="ui checkbox">
+						<input type="checkbox" value="{{ message.id }}">
+						<label></label>
+					</div>
+				</div>
+				<div class="column">
+					<div class="comment mp-message-container">
+						<div class="mp-message-avatar">
+							<a href="{{ profileUrl(message.author) }}">
+								<img src="{{ userAvatar(message.author, 'medium') }}">
+							</a>
+						</div>
+						<div class="mp-message-content">
+							<a href="{{ profileUrl(message.author) }}" class="author">{{ message.author.displayName }}</a>
+							<div class="metadata">
+								<span class="date">{{ message.created_at }}</span>
+							</div>
+							<div class="text">{{ message.message|nl2br }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endspaceless %}

@@ -1,0 +1,16 @@
+{% for post in posts %}
+	<div class="item mp-post" data-post-id="{{ post.id }}">
+		<div class="content">
+			<a class="header" href="{{ post.link }}">{{ post.title }} </a>
+			<div class="meta">
+				<small class="date">{{ post.date }}</small>
+			</div>
+			<div class="extra">
+				<div><small>{{ post.category }}</small></div>
+				{% if post.comments_count %}
+					<small>{{ post.comments_count }} {{ translate('Comments') }}</small>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endfor %}

@@ -49,7 +49,7 @@ if(empty($_GET['t'])){
 }
 
 $res = get_booklist($user_id, $start*5);
-$playlistcount = count(get_book_count($user_id));;
+//$playlistcount = count(get_book_count($user_id));;
 
 $sum = count( get_all_book_count($user_id) );
 $sub = 10;
@@ -117,7 +117,7 @@ $sub = 10;
                               <li class="item_title">
                                 <div class="item_a"><input type="checkbox" class="_check_all" id="check_all"></div>
                                 <div class="item_b"><span class="text">全选</span></div>
-                                <div class="item_c">指数</div>
+                                <div class="item_c">浏览</div>
                                 <div class="item_d">操作</div>
                               </li>
 

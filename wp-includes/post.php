@@ -6329,11 +6329,11 @@ function get_booklist($user_id,$start){
 
 
 //查询绘本总数
-function get_book_count($user_id){
+/*function get_book_count($user_id){
 	global $wpdb;
     $posts = $wpdb->get_results("select ID from wp_terms as t LEFT JOIN wp_term_relationships as r on t.term_id = r.term_taxonomy_id LEFT JOIN wp_posts on r.object_id = wp_posts.ID where post_author = $user_id and post_status = 'publish' group by ID");
     return $posts; 
-}
+}*/
 
 //获取绘本总数
 function get_all_book_count($user_id){

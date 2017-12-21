@@ -6341,3 +6341,10 @@ function get_all_book_count($user_id){
     $posts = $wpdb->get_results("select ID from wp_terms as t LEFT JOIN wp_term_relationships as r on t.term_id = r.term_taxonomy_id LEFT JOIN wp_posts on r.object_id = wp_posts.ID where post_author = $user_id and post_status = 'publish' group by ID");
     return $posts; 
 }
+
+//获取绘本内容详情
+function get_article_terms($post_id){
+	global $wpdb;
+	$result = $wpdb->get_results("select t.name,t.term_id from wp_term_relationships as r left join wp_terms as t on r.term_taxonomy_id = t.term_id  where r.object_id = $post_id");
+	return $result;
+}

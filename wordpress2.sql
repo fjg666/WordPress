@@ -44,8 +44,8 @@ CREATE TABLE `wp_comments` (
   `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `comment_author_IP` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `comment_date` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
+  `comment_date_gmt` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
   `comment_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `comment_karma` int(11) NOT NULL DEFAULT '0',
   `comment_approved` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
@@ -80,7 +80,7 @@ CREATE TABLE `wp_links` (
   `link_visible` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Y',
   `link_owner` bigint(20) unsigned NOT NULL DEFAULT '1',
   `link_rating` int(11) NOT NULL DEFAULT '0',
-  `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `link_updated` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
   `link_rel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `link_notes` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `link_rss` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -343,8 +343,8 @@ DROP TABLE IF EXISTS `wp_posts`;
 CREATE TABLE `wp_posts` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `post_author` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `post_date` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
+  `post_date_gmt` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
   `post_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `post_title` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `post_excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -355,8 +355,8 @@ CREATE TABLE `wp_posts` (
   `post_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `to_ping` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `pinged` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `post_modified` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
+  `post_modified_gmt` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
   `post_content_filtered` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `post_parent` bigint(20) unsigned NOT NULL DEFAULT '0',
   `guid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -376,7 +376,7 @@ CREATE TABLE `wp_posts` (
 -- ----------------------------
 INSERT INTO `wp_posts` VALUES ('1', '1', '2017-12-18 10:54:11', '2017-12-18 02:54:11', '欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！', '世界，您好！', '', 'publish', 'open', 'open', '', 'hello-world', '', '', '2017-12-18 10:54:11', '2017-12-18 02:54:11', '', '0', 'http://localhost/wordpress/?p=1', '0', 'post', '', '1');
 INSERT INTO `wp_posts` VALUES ('2', '1', '2017-12-18 10:54:11', '2017-12-18 02:54:11', '这是示范页面。页面和博客文章不同，它的位置是固定的，通常会在站点导航栏显示。很多用户都创建一个“关于”页面，向访客介绍自己。例如：\n\n<blockquote>欢迎！我白天是个邮递员，晚上就是个有抱负的演员。这是我的博客。我住在天朝的帝都，有条叫做Jack的狗。</blockquote>\n\n……或这个：\n\n<blockquote>XYZ Doohickey公司成立于1971年，自从建立以来，我们一直向社会贡献着优秀doohickies。我们的公司总部位于天朝魔都，有着超过两千名员工，对魔都政府税收有着巨大贡献。</blockquote>\n\n而您，作为一个WordPress用户，我们建议您访问<a href=\"http://localhost/wordpress/wp-admin/\">控制板</a>，删除本页面，然后添加您自己的页面。祝您使用愉快！', '示例页面', '', 'publish', 'closed', 'open', '', 'sample-page', '', '', '2017-12-18 10:54:11', '2017-12-18 02:54:11', '', '0', 'http://localhost/wordpress/?page_id=2', '0', 'page', '', '0');
-INSERT INTO `wp_posts` VALUES ('3', '1', '2017-12-18 10:54:22', '0000-00-00 00:00:00', '', '自动草稿', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-12-18 10:54:22', '0000-00-00 00:00:00', '', '0', 'http://localhost/wordpress/?p=3', '0', 'post', '', '0');
+INSERT INTO `wp_posts` VALUES ('3', '1', '2017-12-18 10:54:22', '2011-11-11 11:11:11', '', '自动草稿', '', 'auto-draft', 'open', 'open', '', '', '', '', '2017-12-18 10:54:22', '2011-11-11 11:11:11', '', '0', 'http://localhost/wordpress/?p=3', '0', 'post', '', '0');
 INSERT INTO `wp_posts` VALUES ('5', '1', '2017-12-20 10:21:18', '2017-12-20 02:21:18', '[video width=\"960\" height=\"540\" mp4=\"http://localhost/wordpress/wp-content/uploads/2017/12/MADNESS.mp4\"][/video]', 'Demo 01', '', 'publish', 'open', 'open', '', 'demo-01', '', '', '2017-12-20 10:22:16', '2017-12-20 02:22:16', '', '0', 'http://localhost/wordpress/?p=5', '0', 'post', '', '0');
 INSERT INTO `wp_posts` VALUES ('6', '1', '2017-12-20 10:20:53', '2017-12-20 02:20:53', '', 'MADNESS', '', 'inherit', 'open', 'closed', '', 'madness', '', '', '2017-12-20 10:20:53', '2017-12-20 02:20:53', '', '5', 'http://localhost/wordpress/wp-content/uploads/2017/12/MADNESS.mp4', '0', 'attachment', 'video/mp4', '0');
 INSERT INTO `wp_posts` VALUES ('7', '1', '2017-12-20 10:21:18', '2017-12-20 02:21:18', '[video width=\"960\" height=\"540\" mp4=\"http://localhost/wordpress/wp-content/uploads/2017/12/MADNESS.mp4\"][/video]', 'Demo 01', '', 'inherit', 'closed', 'closed', '', '5-revision-v1', '', '', '2017-12-20 10:21:18', '2017-12-20 02:21:18', '', '5', 'http://localhost/wordpress/2017/12/20/5-revision-v1/', '0', 'revision', '', '0');
@@ -1332,7 +1332,7 @@ CREATE TABLE `wp_users` (
   `user_nicename` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_url` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `user_registered` datetime NOT NULL DEFAULT '2011-11-11 11:11:11',
   `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `user_status` int(11) NOT NULL DEFAULT '0',
   `display_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',

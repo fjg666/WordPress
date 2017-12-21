@@ -103,6 +103,9 @@ case 'edit':
 		exit();
 	}
 
+	//添加文章浏览记录meta
+	add_post_meta( $post_id, '_post_views', 0 );
+
 	if ( ! $post )
 		wp_die( __( 'You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?' ) );
 
@@ -125,7 +128,7 @@ case 'edit':
 		wp_redirect( get_edit_post_link( $post_id, 'url' ) );
 		exit();
 	}
-
+	
 	$post_type = $post->post_type;
 	if ( 'post' == $post_type ) {
 		$parent_file = "edit.php";

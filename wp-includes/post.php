@@ -6305,3 +6305,39 @@ function _filter_query_attachment_filenames( $clauses ) {
 
 	return $clauses;
 }
+
+
+//查询绘本列表
+function get_booklist($user_id,$start){
+	global $wpdb;
+	$result = $wpdb->get_results("select ID,post_title,post_date from wp_terms as t LEFT JOIN wp_term_relationships as r on t.term_id = r.term_taxonomy_id LEFT JOIN wp_posts as p on r.object_id = p.ID where p.post_author = $user_id and p.post_status = 'publish' group by post_title,post_date order by p.post_modified desc limit $start, 5");
+    foreach ($result as $key => $value) {
+		
+		$result[$key]->id = $value->ID;
+    	//文章封面图
+		$thumbnail_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($value->ID), 'thumbnail');
+		$result[$key]->backgroundurl = $thumbnail_image_url[0]; 
+		
+		//获取文章浏览数量
+    	$post_read = get_post_meta($value->ID,'_post_views',true);
+    	$result[$key]->post_read = $post_read?intval($post_read):0;
+		
+		$result[$key]->post_date = $value->post_date;
+    }
+    return $result; 
+}
+
+
+//查询绘本总数
+function get_book_count($user_id){
+	global $wpdb;
+    $posts = $wpdb->get_results("select ID from wp_terms as t LEFT JOIN wp_term_relationships as r on t.term_id = r.term_taxonomy_id LEFT JOIN wp_posts on r.object_id = wp_posts.ID where post_author = $user_id and post_status = 'publish' group by ID");
+    return $posts; 
+}
+
+//获取绘本总数
+function get_all_book_count($user_id){
+    global $wpdb;
+    $posts = $wpdb->get_results("select ID from wp_terms as t LEFT JOIN wp_term_relationships as r on t.term_id = r.term_taxonomy_id LEFT JOIN wp_posts on r.object_id = wp_posts.ID where post_author = $user_id and post_status = 'publish' group by ID");
+    return $posts; 
+}

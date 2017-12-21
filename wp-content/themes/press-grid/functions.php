@@ -140,6 +140,18 @@ function press_grid_enqueue_scripts() {
     wp_enqueue_script('press-grid-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), false, true );
     wp_enqueue_script('press-grid-app-script', get_template_directory_uri() . '/js/app.js', array('jquery', 'mediaelement', 'wp-playlist'), false, true );
 
+
+	/////////////////////////////////////
+    // jquery file upload
+    wp_enqueue_script('press-grid-ui-widget', get_template_directory_uri()
+        . '/js/vendor/jquery.ui.widget.js', array('jquery'), false, true );
+
+    wp_enqueue_script('press-grid-iframe-transport', get_template_directory_uri()
+        . '/js/vendor/jquery.iframe-transport.js', array('jquery'), false, true );
+
+    wp_enqueue_script('press-grid-fileupload', get_template_directory_uri()
+        . '/js/vendor/jquery.fileupload.js', array('jquery'), false, true );
+
     // Print Inline Style, Scripts
     wp_add_inline_style('press-grid-stylesheet', Press_Grid_Tpl::inline_styles());
     wp_add_inline_script('press-grid-lib-packages', Press_Grid_Tpl::inline_script() );

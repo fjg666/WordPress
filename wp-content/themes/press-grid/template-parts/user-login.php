@@ -21,9 +21,9 @@
                     <i class="fa fa-pencil-square"></i>
                     <?php esc_html_e('Add Post', 'press-grid'); ?>
                 </a> -->
-				<a class="dropdown-item" href="<?php echo esc_url(Press_Grid_Static::get_url_profile()); ?>">
-                    <i class="fa fa-cog"></i>
-                    <?php esc_html_e('绘本管理', 'press-grid'); ?>
+				<a class="dropdown-item" href="<?php echo esc_url(Press_Grid_Static::get_url_draw() ); ?>">
+                    <i class="fa icon-pencil"></i>
+                    <?php esc_html_e('绘本管理', 'press-grid');?>
                 </a>
                 <span class="dropdown-divider"></span>
                 <a class="dropdown-item" href="<?php echo esc_url(wp_logout_url( home_url('/') )); ?>">

@@ -40,7 +40,31 @@ class Press_Grid_Core{
         // some media scripts
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
         add_filter( 'ajax_query_attachments_args', array( $this, 'filter_media' ) );
+
+		//批量删除绘本
+		add_action('wp_ajax_themeton_del_booklist', array($this, 'del_booklist'));
 	}
+
+
+/**************** 绘本管理 *****************/
+
+	
+	//批量删除绘本
+	public function del_booklist(){
+		global $wpdb;
+		$id = $_POST['id'];
+		foreach($id as $k=>$v){
+			$result = wp_delete_post($v , true);
+		}
+		if($result){
+			print_r(1);
+		}
+		exit;
+	}
+
+
+/**************** End *****************/
+
 
     // re-flush rewrite
     public function settings_flush_rewrite(){
@@ -104,6 +128,18 @@ class Press_Grid_Core{
         else if( isset($wp_query->query_vars['pagename'], $wp_query->query_vars['reaction']) && $wp_query->query_vars['pagename']=='reaction' && !empty($wp_query->query_vars['reaction']) ){
             $title['title'] = esc_html__('Filter by Reaction', 'press-grid');
         }
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename'])&& $wp_query->query_vars['pagename']=='draw-list' ){
+			$title['title'] = esc_html__('绘本管理', 'press-grid');
+		}
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename'])&& $wp_query->query_vars['pagename']=='draw-edit' ){
+			$title['title'] = esc_html__('绘本编辑', 'press-grid');
+		}
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename'])&& $wp_query->query_vars['pagename']=='draw-item' ){
+			$title['title'] = esc_html__('我的绘本', 'press-grid');
+		}
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename'])&& $wp_query->query_vars['pagename']=='draw-item-detail' ){
+			$title['title'] = esc_html__('专辑信息', 'press-grid');
+		}
 
         return $title;
 	}
@@ -131,13 +167,27 @@ class Press_Grid_Core{
         else if( isset($wp_query->query_vars['pagename'], $wp_query->query_vars['reaction']) && $wp_query->query_vars['pagename']=='reaction' && !empty($wp_query->query_vars['reaction']) ){
             return get_template_directory() . '/tpl-reaction.php';
         }
+		
+		/**** 绘本管理 ****/
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename']) && $wp_query->query_vars['pagename']=='draw-list' ) {
+			return get_template_directory() . '/template-page/tpl-draw-list.php';
+		}
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename']) && $wp_query->query_vars['pagename']=='draw-edit' ) {
+			return get_template_directory() . '/template-page/tpl-draw-edit.php';
+		}
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename']) && $wp_query->query_vars['pagename']=='draw-item' ){
+			return get_template_directory() . '/template-page/tpl-draw-item.php';
+		}
+		else if( is_user_logged_in() && isset($wp_query->query_vars['pagename']) && $wp_query->query_vars['pagename']=='draw-item-detail' ) {
+			return get_template_directory() . '/template-page/tpl-draw-item-detail.php';
+		}
 
         return $template;
     }
 
 
     // load some media scripts
-    public function enqueue_scripts(){
+    /*public function enqueue_scripts(){
         global $wp_query;
         if( is_user_logged_in() && isset($wp_query->query_vars['pagename']) ){
             if( $wp_query->query_vars['pagename']=='frontend-editor' || $wp_query->query_vars['pagename']=='profile-edit' ){
@@ -145,7 +195,18 @@ class Press_Grid_Core{
                 wp_enqueue_script('press-grid-frontend', get_template_directory_uri() . '/js/frontend.js', array('jquery'), false, true );
             }
         }
-    }
+    }*/
+
+	  // load some media scripts
+  public function enqueue_scripts(){
+      global $wp_query;
+      if( is_user_logged_in() && isset($wp_query->query_vars['pagename']) ){
+          if( $wp_query->query_vars['pagename']=='frontend-editor' || $wp_query->query_vars['pagename']=='profile-edit' || $wp_query->query_vars['pagename']=='draw-edit' || $wp_query->query_vars['pagename']=='draw-list' ){
+              wp_enqueue_media();
+              wp_enqueue_script('press-grid-frontend', get_template_directory_uri() . '/js/frontend.js', array('jquery'), false, true );
+          }
+      }
+  }
 
     public function filter_media( $query ){
         // admins get to see everything
@@ -340,6 +401,55 @@ class Press_Grid_Static{
         $uri = Press_Grid_Static::build_url('?pagename=' . $slug);
         return Press_Grid_Static::get_uri($nuri, $uri);
     }
+	
+	
+	public static function get_url_draw_list(){
+		$slug = '?pagename=draw-list';
+		$slug_permastruct = 'draw-list';
+		$nuri = Press_Grid_Static::build_url( $slug_permastruct );
+		$uri = Press_Grid_Static::build_url(  $slug  );
+		return Press_Grid_Static::get_uri($nuri, $uri);
+	}
+	
+
+	public static function get_url_draw_edit($id=''){
+		if($id){
+			$slug = '?pagename=draw-edit&post='.$id;
+			$slug_permastruct = 'draw-edit?post='.$id;
+		}
+		else{
+			$slug = '?pagename=draw-edit';
+			$slug_permastruct = 'draw-edit';
+		}
+		$nuri = Press_Grid_Static::build_url( $slug_permastruct  );
+		$uri = Press_Grid_Static::build_url(  $slug );
+		return Press_Grid_Static::get_uri($nuri, $uri);
+	}
+
+
+	//显示绘本列表页
+	public static function get_url_draw(){
+		$slug	= 'draw-list';
+		$nuri	= Press_Grid_Static::build_url($slug . "/");
+		$uri	= Press_Grid_Static::build_url('?pagename=' . $slug);
+		return Press_Grid_Static::get_uri($nuri, $uri);
+	}
+
+		
+	//返回绘本连接
+	/*public static function get_url_draw_edit($id=''){
+		if($id){
+			$slug = '?pagename=draw-edit&post='.$id;
+			$slug_permastruct = 'draw-edit?post='.$id;
+		}else{
+			$slug = '?pagename=draw-edit';
+			$slug_permastruct = 'draw-edit';
+		}
+		$nuri = Press_Grid_Static::build_url( $slug_permastruct  );
+		$uri = Press_Grid_Static::build_url(  $slug );
+		return Press_Grid_Static::get_uri($nuri, $uri);
+	}*/
+
 
     public static function get_url_reacted_posts(){
         $slug = 'reacted-posts';

@@ -9,8 +9,8 @@ class Press_Grid_Post{
 			'count' => 0,
 			'current' => 1,
 			'pagination' => array(),
-			'pager_label' => esc_html__('Load more', 'press-grid'),
-			'pager_label_empty' => esc_html__('No more posts', 'press-grid'),
+			'pager_label' => esc_html__('查看更多', 'press-grid'),
+			'pager_label_empty' => esc_html__('没有了', 'press-grid'),
 			'items' => array()
 		);
 

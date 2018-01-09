@@ -25,7 +25,7 @@ if( $post_id>0 ){
         $post_title = $the_post->post_title;
         $post_excerpt = $the_post->post_excerpt;
         $post_content = $the_post->post_content;
-
+		
         if( has_post_thumbnail($post_id) ){
             $post_image = get_post_thumbnail_id($post_id);
             $post_image_src = sprintf( '<img src="%s">', esc_attr(wp_get_attachment_image_url($post_image, 'full')) );

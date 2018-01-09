@@ -3,7 +3,30 @@
 class Press_Grid_Post{
 
 	public static function get_posts(){
-		global $wp_query;
+		$current_user = wp_get_current_user();
+		$age = get_user_meta($current_user->ID,'user_age',true);
+				
+		$arr = array(
+			"2" => "6",
+			"3" => "6",
+			"4" => "6",
+			"5" => "7",
+			"6" => "7",
+			"7" => "7",
+			"8" => "8",
+			"9" => "8",
+			"10" =>"8",
+		);
+
+		
+		$args = array( 
+			'tag_id' => $arr[$age], //根据用户年龄筛选文章
+			'orderby' => $_GET["orderby"], //date发布时间、comment_count评论数量排序
+			'meta_key' => '_post_views', //配合meta_value_num根据文章浏览量排序
+			'paged'=>get_query_var('paged'),//分页
+			'order' => 'DESC' //降序排
+		);
+		$query = new WP_Query($args);
 
 		$result = array(
 			'count' => 0,
@@ -14,8 +37,8 @@ class Press_Grid_Post{
 			'items' => array()
 		);
 
-		while( have_posts() ){
-			the_post();
+		while( $query->have_posts() ){
+			$query->the_post();
 			global $post;
 
 			$item = Press_Grid_Post::get_post_item();
@@ -23,7 +46,7 @@ class Press_Grid_Post{
 		}
 
 		// get pagination
-		Press_Grid_Post::get_pagination($wp_query, $result);
+		Press_Grid_Post::get_pagination($query, $result);
 
 		wp_reset_postdata();
 

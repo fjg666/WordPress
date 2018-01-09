@@ -104,7 +104,10 @@ case 'edit':
 	}
 
 	//添加文章浏览记录meta
-	add_post_meta( $post_id, '_post_views', 0 );
+	$check = get_post_meta($post_id , '_post_views' , true);
+	if(!$check){
+		add_post_meta($post_id, '_post_views' , 0);
+	}
 
 	if ( ! $post )
 		wp_die( __( 'You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?' ) );

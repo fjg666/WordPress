@@ -846,7 +846,6 @@ console.log(draw_edit_json[0].img);
               console.log('delete success');
             }
           });
-
         }
       }, function(e) {
         // 点击[取消/关闭]按钮后执行...

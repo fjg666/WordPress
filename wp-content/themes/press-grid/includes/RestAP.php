@@ -7,20 +7,20 @@ class Press_Grid_Post{
 		$age = get_user_meta($current_user->ID,'user_age',true);
 				
 		$arr = array(
-			"2" => "6",
-			"3" => "6",
-			"4" => "6",
-			"5" => "7",
-			"6" => "7",
-			"7" => "7",
-			"8" => "8",
-			"9" => "8",
-			"10" =>"8",
+			"2" => "2-4",
+			"3" => "2-4",
+			"4" => "2-4",
+			"5" => "5-7",
+			"6" => "5-7",
+			"7" => "5-7",
+			"8" => "8-10",
+			"9" => "8-10",
+			"10" =>"8-10",
 		);
 
 		
 		$args = array( 
-			'tag_id' => $arr[$age], //根据用户年龄筛选文章
+			'tag' => $arr[$age], //根据用户年龄筛选文章
 			'orderby' => $_GET["orderby"], //date发布时间、comment_count评论数量排序
 			'meta_key' => '_post_views', //配合meta_value_num根据文章浏览量排序
 			'paged'=>get_query_var('paged'),//分页

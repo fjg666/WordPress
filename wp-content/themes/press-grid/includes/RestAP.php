@@ -9,7 +9,7 @@ class Press_Grid_Post{
 		$user_age = get_user_meta($current_user->ID,'user_age',true);
 		
 		//性格
-		$nature = "1";
+		$nature = "";
 		//性别
 		$sex = "女";
 		
@@ -72,6 +72,7 @@ class Press_Grid_Post{
 				"4" => "kl",
 				"5" => "kl",
 				"6" => "kl"
+				
 			),
 			//性别对应
 			'sex' => array(

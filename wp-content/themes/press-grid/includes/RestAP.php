@@ -6,21 +6,29 @@ class Press_Grid_Post{
 		
 		//获取用户年龄（测试）
 		$current_user = wp_get_current_user();
-		$user_age = get_user_meta($current_user->ID,'user_age',true);
-		
+		//$user_age = get_user_meta($current_user->ID,'user_age',true);
+		$user_age = "2";
 		//性格
 		$nature = "";
 		//性别
-		$sex = "女";
+		$sex = "";
 		
 		$result = self::get_user();
 		$args = array( 
-			'tag' => $result['age'][$user_age].",".$result['nature'][$nature].",".$result['sex'][$sex], //根据用户年龄筛选文章
+			//'tag_slug__in' => array($result['age'][$user_age],$result['nature'][$nature],$result['sex'][$sex]), //根据用户年龄筛选文章
 			'orderby' => $_GET["orderby"], //date发布时间、comment_count评论数量排序
 			'meta_key' => '_post_views', //配合meta_value_num根据文章浏览量排序
 			'paged' => get_query_var('paged'), //分页
 			'order' => 'DESC' //降序排
 		);
+		
+		//根据用户年龄筛选文章，判断是否有值
+		if($user_age || $nature || $sex){
+			$args["tag_slug__in"]  = array($result['age'][$user_age],$result['nature'][$nature],$result['sex'][$sex]);
+		}else{
+			$args["tag_slug__and"] = array($result['age'][$user_age],$result['nature'][$nature],$result['sex'][$sex]);
+		}
+
 		$query = new WP_Query($args);
 
 		$result = array(

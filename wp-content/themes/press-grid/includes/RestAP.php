@@ -3,27 +3,22 @@
 class Press_Grid_Post{
 
 	public static function get_posts(){
-		$current_user = wp_get_current_user();
-		$age = get_user_meta($current_user->ID,'user_age',true);
-				
-		$arr = array(
-			"2" => "2-4",
-			"3" => "2-4",
-			"4" => "2-4",
-			"5" => "5-7",
-			"6" => "5-7",
-			"7" => "5-7",
-			"8" => "8-10",
-			"9" => "8-10",
-			"10" =>"8-10",
-		);
-
 		
+		//获取用户年龄（测试）
+		$current_user = wp_get_current_user();
+		$user_age = get_user_meta($current_user->ID,'user_age',true);
+		
+		//性格
+		$nature = "1";
+		//性别
+		$sex = "女";
+		
+		$result = self::get_user();
 		$args = array( 
-			'tag' => $arr[$age], //根据用户年龄筛选文章
+			'tag' => $result['age'][$user_age].",".$result['nature'][$nature].",".$result['sex'][$sex], //根据用户年龄筛选文章
 			'orderby' => $_GET["orderby"], //date发布时间、comment_count评论数量排序
 			'meta_key' => '_post_views', //配合meta_value_num根据文章浏览量排序
-			'paged'=>get_query_var('paged'),//分页
+			'paged' => get_query_var('paged'), //分页
 			'order' => 'DESC' //降序排
 		);
 		$query = new WP_Query($args);
@@ -52,6 +47,41 @@ class Press_Grid_Post{
 
 		return $result;
 		
+	}
+
+	public static function get_user(){
+		
+		$result = array(
+			//年龄对应
+			'age' => array(
+				"2" => "2-4",
+				"3" => "2-4",
+				"4" => "2-4",
+				"5" => "5-7",
+				"6" => "5-7",
+				"7" => "5-7",
+				"8" => "8-10",
+				"9" => "8-10",
+				"10" =>"8-10"
+			),
+			//性格对应
+			'nature' => array(
+				"1" => "nx",
+				"2" => "nx",
+				"3" => "nx",
+				"4" => "kl",
+				"5" => "kl",
+				"6" => "kl"
+			),
+			//性别对应
+			'sex' => array(
+				"1" => "男",
+				"2" => "女"
+			),
+		);
+		
+		//$str = $result['age'][2].','.$result['nature'][2].",".$result['sex'][2];
+		return $result;
 	}
 
 

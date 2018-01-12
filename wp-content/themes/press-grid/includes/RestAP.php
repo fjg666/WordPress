@@ -6,8 +6,7 @@ class Press_Grid_Post{
 		
 		//获取用户年龄（测试）
 		$current_user = wp_get_current_user();
-		//$user_age = get_user_meta($current_user->ID,'user_age',true);
-		$user_age = "2";
+		$user_age = get_user_meta($current_user->ID,'user_age',true);
 		//性格
 		$nature = "";
 		//性别

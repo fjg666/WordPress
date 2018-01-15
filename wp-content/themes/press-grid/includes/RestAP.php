@@ -14,7 +14,6 @@ class Press_Grid_Post{
 		
 		$result = self::get_user();
 		$args = array( 
-			//'tag_slug__in' => array($result['age'][$user_age],$result['nature'][$nature],$result['sex'][$sex]), //根据用户年龄筛选文章
 			'orderby' => $_GET["orderby"], //date发布时间、comment_count评论数量排序
 			'meta_key' => '_post_views', //配合meta_value_num根据文章浏览量排序
 			'paged' => get_query_var('paged'), //分页
@@ -24,8 +23,8 @@ class Press_Grid_Post{
 		//根据用户年龄筛选文章，判断是否有值
 		if($user_age || $nature || $sex){
 			$args["tag_slug__in"]  = array($result['age'][$user_age],$result['nature'][$nature],$result['sex'][$sex]);
-		}else{
-			$args["tag_slug__and"] = array($result['age'][$user_age],$result['nature'][$nature],$result['sex'][$sex]);
+		}else{//如果没值，则把所有数据查询出来
+			$args["tag"] = '';
 		}
 
 		$query = new WP_Query($args);
@@ -78,13 +77,16 @@ class Press_Grid_Post{
 				"3" => "nx",
 				"4" => "kl",
 				"5" => "kl",
-				"6" => "kl"
+				"6" => "kl",
+				"7" => "hp",
+				"8" => "hp",
+				"9" => "hp",
 				
 			),
 			//性别对应
 			'sex' => array(
-				"1" => "男",
-				"2" => "女"
+				"1" => "man",
+				"2" => "women"
 			),
 		);
 		
